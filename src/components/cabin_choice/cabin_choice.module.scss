@@ -1,0 +1,129 @@
+@import '../../var.scss';
+
+$zoom-value: 0.8;
+
+@mixin languages_choice {
+  margin: 0px 10px 10px 10px;
+  align-items: center;
+  width:auto;
+  max-width: 230px;
+  zoom: $zoom-value;
+  -ms-zoom: $zoom-value;
+  -webkit-zoom: $zoom-value;
+  -moz-transform:  scale($zoom-value,$zoom-value);
+  -moz-transform-origin: left center;
+}
+
+@mixin language_button {
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  margin: 5px;
+  text-align: center;
+  line-height: 35px;
+  background-color: #6193df;
+}
+
+@mixin language_button_active {
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  margin: 5px;
+  text-align: center;
+  line-height: 35px;
+  background-color: rgb(96, 52, 199);
+}
+
+@mixin typography_medium {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+
+.add_border {
+border: 1px solid #B137A6;
+border-radius: 10px;
+padding: 10px;
+}
+
+.red {
+background-color: red !important;
+}
+
+.languages_choice{
+  cursor: pointer;
+  @include languages_choice;
+  .typography_medium {
+    @include typography_medium;
+  }
+  .language_button {
+    @include language_button;
+  }
+  .language_button_active {
+    @include language_button_active;
+  }
+}
+
+@-webkit-keyframes animation_color {
+  0%     {background-color:red;}
+  50.0%  {background-color:#ff6666;} /* your chosen 'mid' color */
+  100.0%  {background-color:red;}
+}
+
+@keyframes animation_color {
+  0%     {background-color:red;}
+  50.0%  {background-color:#ff6666;}
+  100.0%  {background-color:red;}
+}
+
+.language_button:hover  {
+  background-color: #3739b1;
+}
+
+.language_button:active {
+  animation: animation_color 6s;
+  border: 1px solid red;
+}
+
+.volume {
+  color: #fff;
+  font-weight: 400;
+  font-size: 130%;
+  width: 90px;
+  text-align: right;
+}
+
+.active_dot {
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  border-radius: 50%;
+  display: block;
+  margin: 14px -20px 0 15px;
+  position: absolute;
+}
+
+.audio_analyser {
+  position: absolute;
+}
+
+.analyser_container {
+  position: relative;
+}
+
+.display_none {
+  display: none;
+}
+
+.two_columns_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

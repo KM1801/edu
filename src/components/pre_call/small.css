@@ -1,0 +1,11 @@
+path {
+    stroke-linecap: square;
+    stroke: white;
+    stroke-width: 0.5px;
+}
+
+#visualizer {
+    width: 30vw;
+    max-width: 350px;
+    height: 120px;
+}

@@ -1,0 +1,11 @@
+.video_player_contain {
+    video {
+        object-fit: contain !important;
+    }
+}
+
+.video_player_cover {
+    video {
+        object-fit: cover !important;
+    }
+}
